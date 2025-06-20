@@ -86,4 +86,4 @@ app.get('/api/dogs', async (req, res) => {
         res.json(results);
     } catch (error) {
         console.error('Database error:', error);
-        res.status(500).json({})
+        res.status(500).json(error): ''})
