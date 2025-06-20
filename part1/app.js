@@ -95,10 +95,7 @@ app.get('/api/dogs', async (req, res) => {
 app.get('/api/walkrequests/open', async (req, res) => {
     try {
         const query = `
-        SELECT d.name as dog_name, d.size, u.username as owner_username
-        FROM Dogs d
-        JOIN Users u ON d.owner_id = u.user_id
-        ORDER BY d.name;
+        SELECT wr.request_id, d.name as dog_name, u.username as owner_username, wr.requested_time, wr.duration_minutes, wr.locati
     `;
         const [results] = await promisePool.query(query);
         res.json(results);
