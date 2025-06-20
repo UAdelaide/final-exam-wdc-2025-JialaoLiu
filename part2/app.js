@@ -21,6 +21,8 @@ app.use(session(
   {
     secret:'dogwalk-secret-key-part2',
     resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } // Defa
 ))
 
 app.use(logger('dev'));
