@@ -76,5 +76,5 @@ VALUES
 
 app.get('/api/dogs', async (req, res) => {
     try {
-        const query = 
+        const query = ``
     }
