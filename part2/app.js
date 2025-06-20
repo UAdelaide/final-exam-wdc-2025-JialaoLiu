@@ -17,6 +17,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+// Q13 session setup
 app.use(session(
   {
     secret:'dogwalk-secret-key-part2',
