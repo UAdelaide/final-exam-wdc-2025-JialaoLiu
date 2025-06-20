@@ -116,4 +116,5 @@ app.get('/api/walkrequests/open', async (req, res) => {
     }
 });
 
-//question 8 /api
+//question 8 /api/walkers/summary
+app
