@@ -40,6 +40,9 @@ router.post('/login', async (req, res) => {
   // const { email, password } = req.body;
   const { username, password } = req.body;
 
+  if (!username || !password) {
+    return
+
   try {
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
