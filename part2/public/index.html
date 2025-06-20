@@ -85,12 +85,19 @@
             console.error('Error fetching dogs:', error);
           }
         },
-
-        getSize
-
-
-
-
+        // Q17: 
+        getSizeClass(size) {
+          switch (size) {
+            case 'small':
+              return 'badge bg-success';
+            case 'medium':
+              return 'badge bg-warning';
+            case 'large':
+              return 'badge bg-danger';
+            default:
+              return '';
+          }
+        },
 
 
 
