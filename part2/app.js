@@ -24,7 +24,8 @@ app.use(session(
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false } // Default is false.
-))
+));
+
 
 app.use(logger('dev'));
 app.use(express.json());
