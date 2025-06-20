@@ -66,5 +66,6 @@ VALUES
   ((SELECT dog_id FROM Dogs WHERE name = 'Cookie'), '2025-06-21 10:00:00', 60, 'Costco', 'open'),
   ((SELECT dog_id FROM Dogs WHERE name = 'Rookie'), '2025-06-21 11:30:00', 30, 'Melbourne St', 'open'),
   ((SELECT dog_id FROM Dogs WHERE name = 'Trey'), '2025-06-21 17:00:00', 90, 'North Adelaide', 'open');
-)
+        `);
+
     }
