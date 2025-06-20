@@ -67,8 +67,9 @@
               window.location.href = data.redirectUrl; // Redirect to the appropriate dashboard
             }
             else {
-              
+              this.errormessage = data.message || 'Login failed.';
             }
+          } catch (error) {
           }
         }
       }
