@@ -31,7 +31,8 @@
             <label class="form-label">Select Your Dog</label>
             <select v-model="form.dog_id" class="form-select" required>
               <option value="">-- Choose a dog --</option>
-              <option v-for="D"
+              <option v-for="Dog in My dogs" :key="Dog.id" :value="Dog.id">
+                {{ Dog.name }} ({{ Dog.size }})
             </select>
           </div>
           <div class="mb-3">
