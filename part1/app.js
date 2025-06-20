@@ -138,3 +138,4 @@ app.get('/api/walkers/summary', async (req, res) => {
         console.error('Database error:', error);
         res.status(500).json({error: 'Fetching walker summary failed'});
     }
+});
