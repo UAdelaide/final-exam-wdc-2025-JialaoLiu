@@ -80,8 +80,12 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/status', (req, res) => {
-  res.json
-})
+  res.json({
+    loggedIn: !!req.session.user,
+    user: req.session.user || null
+  });
+});
+
 
 
 module.exports = router;
