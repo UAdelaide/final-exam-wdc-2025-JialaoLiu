@@ -51,7 +51,9 @@
                 </thead>
                 <tbody>
                   <tr v-for="dog in dogs" :key="dog.dog_name">
-                    <td><img :src="dog.randomphoto" alt="dog.dog_name" style="width: 80px;height: 80px; object-fit: cover; bor"></td>
+                    <td><img :src="dog.randomphoto" alt="dog.dog_name"
+                      style="width: 80px;height: 80px; object-fit: cover; border-radius: 5px;"></td>
+
                     <td><span :class="getSizeClass(dog.size)">{{ dog.size }}</span></td>
                     <td><img :src="dog.photo || 'https://images.dog.ceo/breeds/schipperke/n02104365_7956.jpg'" alt="Dog Photo" class="img-fluid" style="max-width: 100px;"></td>
                   </tr>
