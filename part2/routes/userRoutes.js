@@ -71,7 +71,7 @@ router.post('/login', async (req, res) => {
       username: user.username,
       role: user.role,
     }
-    , redirectUrl });
+    , redirectUrl: redirectUrl });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
