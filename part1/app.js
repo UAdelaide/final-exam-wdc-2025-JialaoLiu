@@ -121,8 +121,8 @@ app.get('/api/walkers/summary', async (req, res) => {
     try {
         const query = `
             SELECT
-                u.username,
-                COUNT(r,
+                u.username as walker_username,
+                COUNT(r.rating) AS total_ratings,
                 AVG(r.rating) AS average_rating,
                 COUNT(CASE when wr.status = 'completed' then 1 end) AS completed_walks
             FROM Users u
