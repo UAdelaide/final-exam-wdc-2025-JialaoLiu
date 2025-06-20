@@ -132,14 +132,9 @@
 
     methods: {
       logout() {
-        fetch('/api/users/logout', {
-          method: 'POST'})
-          .then(() => {
-            window.location.href = '/'; // Redirect to login page
-          })
-          .catch(err => {
-            console.error('Logout error:', err);
-          });
+        try {
+          await
+        }
       }
     }
   </script>
