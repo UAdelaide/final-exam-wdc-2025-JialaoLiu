@@ -111,6 +111,6 @@ app.get('/api/walkrequests/open', async (req, res) => {
         res.json(results);
     } catch (error) {
         console.error('Database error:', error);
-        res.status(500).json({error: 'Fetching dogs failed'});
+        res.status(500).json({error: 'Fetching walk requests failed'});
     }
 });
