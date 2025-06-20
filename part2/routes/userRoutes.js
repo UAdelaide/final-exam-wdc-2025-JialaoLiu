@@ -79,7 +79,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/status'
+router.get('/status', (req, res) => {})
 
 
 module.exports = router;
