@@ -40,5 +40,6 @@ module.exports = app;
 
 async function initializeDatabase() {
     try {
-        console.log()
+        console.log('Question 6 -8');
+        
     }
