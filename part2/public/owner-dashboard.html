@@ -34,7 +34,7 @@
               <option v-for="Dog in my dogs" :key="dog.Dog_id" :value="dog.Dog_id">
                 {{ Dog.name }} ({{ Dog.size }})
               </option>
-              
+
             </select>
           </div>
           <div class="mb-3">
@@ -156,7 +156,9 @@
       }
     }).mount('#app');
 
-
+      Data(){
+        
+      }
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
