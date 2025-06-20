@@ -12,8 +12,8 @@ const pool = mySQL.createPool({
 });
 
 const promisePool = pool.promise();
-
-module.exports = promisePool;
+// For routes
+module.exports.promisePool = promisePool;
 
 
 var express = require('express');
