@@ -27,6 +27,8 @@
         <label class="form-label">Password</label>
         <input type="password" class="form-control" v-model="password" required>
       </div>
+      <div v-if="message" class="alert alert-info">
+          {{ errormessage }}</div>
       <button type="submit" class="btn btn-primary w-100">Log In</button>
 
 
