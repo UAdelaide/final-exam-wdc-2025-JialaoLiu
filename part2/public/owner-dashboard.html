@@ -137,7 +137,8 @@
             method: 'POST'
           });
           window.location.href = '/'; // Redirect to the login page
-          
+        } catch (error) {
+          console.error('Logout failed:', error);
         }
       }
     }
