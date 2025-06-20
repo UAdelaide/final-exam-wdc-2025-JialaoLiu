@@ -85,7 +85,10 @@ app.get('/api/dogs', async (req, res) => {
   try {
     const db = require('./db');
     const [rows] = await db.query(`
-      SELECT d.name as dog_name,`)
+      SELECT d.name as dog_name,
+      d_size, u.username as owner_username
+      FROM dogs d
+      `)
   }
 
 module.exports = app;
