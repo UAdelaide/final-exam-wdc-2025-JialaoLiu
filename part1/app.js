@@ -39,4 +39,6 @@ module.exports = app;
 
 
 async function initializeDatabase() {
-    
+    try {
+        console.log()
+    }
