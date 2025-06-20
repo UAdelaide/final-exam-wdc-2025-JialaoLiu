@@ -59,7 +59,9 @@
           }
         }
 
-        async 
+        async function getCurrentUser() {
+          try {
+            const response = await fetch('/api/users/me');
         // modify the applyToWalk function to use the user ID
         async function applyToWalk(requestId) {
           try {
