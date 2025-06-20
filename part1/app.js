@@ -51,5 +51,5 @@ async function initializeDatabase() {
         `);
         console.log('Users inserted')
         await promisePool.execute(`
-            INSERance, status) VALUES
+            `
     }
