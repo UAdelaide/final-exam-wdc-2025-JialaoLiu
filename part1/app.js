@@ -74,7 +74,7 @@ module.exports = app;
 //     }
 // }
 
-//question 6
+//question 6 /api/dogs
 app.get('/api/dogs', async (req, res) => {
     try {
         const query = `
@@ -91,4 +91,4 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
-app.get('')
+app.get('/api/')
