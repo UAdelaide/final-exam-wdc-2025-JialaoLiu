@@ -130,7 +130,7 @@
               // Logout function
       async function logout() {
         try {
-          await fetch('/api/users/lougout', {
+          await fetch('/api/users/logout', {
             method: 'POST'
           });
           window.location.href = '/'; // Redirect to the login page
