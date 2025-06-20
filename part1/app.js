@@ -119,5 +119,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
 //question 8 /api/walkers/summary
 app.get('/api/walkers/summary', async (req, res) => {
     try {
-        const query
+        const query = `
+            SELECT
+                u.username,
+                `
     }
