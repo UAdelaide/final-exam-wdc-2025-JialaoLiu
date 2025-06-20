@@ -79,7 +79,9 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/status', (req, res) => {})
+router.get('/status', (req, res) => {
+  res.json
+})
 
 
 module.exports = router;
