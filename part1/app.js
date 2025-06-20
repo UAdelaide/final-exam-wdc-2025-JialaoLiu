@@ -59,5 +59,5 @@ VALUES
   ('Trey', 'small', (SELECT user_id FROM Users WHERE username = 'Jarvis'));
             `);
 
-        await
+        await promisePool
     }
