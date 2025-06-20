@@ -98,7 +98,10 @@ app.get('/api/walkrequests/open', async (req, res) => {
         SELECT wr.request_id,
         d.name as dog_name,
         wr.requested_time,
-        
+        wr.duration_minutes,
+        wr.location,
+        u.username as owner_username,
+    F
     `;
         const [results] = await promisePool.query(query);
         res.json(results);
