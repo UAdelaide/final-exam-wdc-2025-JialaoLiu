@@ -35,7 +35,11 @@
     Vue.createApp({
         data(){return{dogimg: 'https://dog.ceo/api/breeds/image/random'}},
         methods: {
-            async
+            async getDog() {
+                const response = await fetch(this.dogimg);
+                const data = await response.json();
+                this.dogImg = data.message;
+            },
     })
 </body>
 </html>
