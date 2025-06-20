@@ -13,7 +13,7 @@ var userRoutes = require('./routes/userRoutes');
 
 var app = express();
 
-// view engine setup
+// npm audit fix --force
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'jade');
 
