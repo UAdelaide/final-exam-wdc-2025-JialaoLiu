@@ -115,3 +115,5 @@ app.get('/api/walkrequests/open', async (req, res) => {
         res.status(500).json({error: 'Fetching walk requests failed'});
     }
 });
+
+//question 8 /api
