@@ -117,4 +117,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 });
 
 //question 8 /api/walkers/summary
-app
+app.get('/api/walkers/summary', async (req, res) => {
+    try {
+        const query
+    }
