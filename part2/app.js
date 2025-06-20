@@ -37,7 +37,10 @@ app.use(cookieParser());
 
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
-app.use()
+app.use('/api/walks', walkRoutes);
+app.use('/api/users', userRoutes);
+
+app.get()
 
 
 
