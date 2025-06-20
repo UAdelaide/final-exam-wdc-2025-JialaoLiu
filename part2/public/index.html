@@ -64,7 +64,7 @@
             });
             const data = await response.json();
             if (data.success){
-              win
+              window.location.href = data.redirectUrl; // Redirect to the appropriate dashboard
             }
           }
         }
