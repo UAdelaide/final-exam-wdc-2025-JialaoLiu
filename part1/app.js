@@ -122,5 +122,7 @@ app.get('/api/walkers/summary', async (req, res) => {
         const query = `
             SELECT
                 u.username,
+                COUNT(DISTINCT d.dog_id) AS total_dogs,
+                AVG(r.ra)
                 `
     }
