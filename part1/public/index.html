@@ -38,7 +38,7 @@
     Vue.createApp({
         data() {
             return {
-                dogimg: 'https://dog.ceo/api/breeds/image/random'
+                dogImg: 'https://dog.ceo/api/breeds/image/random'
             }
         },
         methods: {
@@ -48,7 +48,8 @@
                 this.dogImg = data.message;
             },
             Submit() {
-
+                // bad sample: do nothing
+            }
         },
         mounted() {
             this.getDog();
