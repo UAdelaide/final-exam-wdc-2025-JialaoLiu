@@ -27,10 +27,10 @@
         <label class="form-label">Password</label>
         <input type="password" class="form-control" v-model="password" required>
       </div>
-      <div v-if="errormessage" class="alert alert-info" role="alert">
-          {{ errormessage }}</div>
-      <button type="submit" class="btn btn-primary w-100">Log In</button>
 
+      <button type="submit" class="btn btn-primary w-100">Log In</button>
+        <div v-if="errormessage" class="alert alert-info" role="alert">
+          {{ errormessage }}</div>
 
 
 
