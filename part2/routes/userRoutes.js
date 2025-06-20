@@ -42,7 +42,6 @@ router.post('/login', async (req, res) => {
 
   if (!username || !password) {
     return res.status(400).json({
-      success: false,
       error: 'Username and password are required' });
   }
 
