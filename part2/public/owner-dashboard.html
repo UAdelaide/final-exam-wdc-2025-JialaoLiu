@@ -130,17 +130,6 @@
       }
     }).mount('#app');
 
-      // Logout function
-      async function logout() {
-        try {
-          await fetch('/api/users/lougout', {
-            method: 'POST'
-          });
-          window.location.href = '/'; // Redirect to the login page
-        } catch (error) {
-          console.error('Logout failed:', error);
-        }
-      }
 
   </script>
 
