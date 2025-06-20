@@ -49,8 +49,7 @@ async function initializeDatabase() {
   ('Jarvis', 'Jarvis@example.com', 'hashed123', 'owner'),
   ('testwalker', 'testwalker@example.com', 'hashed999', 'walker');
         `);
-        console.log('Users inserted successfully');
-
+        console.log()
         await promisePool.execute(`
             INSERT INTO Walks (user_id, date, time, duration, distance, status) VALUES
     }
