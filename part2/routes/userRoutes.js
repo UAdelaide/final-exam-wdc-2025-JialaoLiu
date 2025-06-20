@@ -35,7 +35,7 @@ router.get('/me', (req, res) => {
   res.json(req.session.user);
 });
 
-// POST login (OK version)
+// POST login (clever version)
 router.post('/login', async (req, res) => {
   // const { email, password } = req.body;
   const { username, password } = req.body;
@@ -93,8 +93,8 @@ router.get('/status', (req, res) => {
 
 // POST logout
 router.post('/logout', (req, res) => {
-  req.session.destroy(error => {
-    if (error) {
+  req.session.destroy(err => {
+    if (err) {
       return res.status(500).json({ error: 'Logout failed' });
     }
     res.clearCookie('connect.sid'); // Clear the session cookie
