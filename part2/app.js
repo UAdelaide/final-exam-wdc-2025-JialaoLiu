@@ -84,7 +84,8 @@ app.use(function(err, req, res, next) {
 app.get('/api/dogs', async (req, res) => {
   try {
     const db = require('./db');
-    const [rows] =
+    const [rows] = await db.query(`
+      SELECT`)
   }
 
 module.exports = app;
