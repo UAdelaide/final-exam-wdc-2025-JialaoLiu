@@ -90,7 +90,7 @@ app.get('/api/dogs', async (req, res) => {
       FROM dogs d
       JOIN users u ON d.owner_id = u.id
       `);
-      
+      req
   }
 
 module.exports = app;
