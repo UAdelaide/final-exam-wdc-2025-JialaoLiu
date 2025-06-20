@@ -5,6 +5,8 @@ const pool = mySQL.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
+    database: 'DogWalkService',
+    waitForConnections: true,
 
 
 var express = require('express');
