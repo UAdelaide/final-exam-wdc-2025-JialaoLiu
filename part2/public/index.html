@@ -39,7 +39,25 @@
 
           <section class="my-5" v-if="dogs.length > 0">
             <h2 class="text-center mb-4">All Registered Dogs</h2>
-            <div class="row>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Breed</th>
+                    <th>Size</th>
+                    <th>Photo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="dog in dogs" :key="dog.dog_id">
+                    <td>{{ dog.name }}</td>
+                    <td>{{ dog.breed }}</td>
+                    <td><span :class="getSizeClass(dog.size)">{{ dog.size }}</span></td>
+                    <td><img :src="dog.photo || 'https://images.dog.ceo/breeds/schipperke/n02104365_7956.jpg'" alt="Dog Photo" class="img-fluid" style="max-width: 100px;"></td>
+                  </tr>
+                </tbody>
+              </table>
           </section>
 
   </div>
