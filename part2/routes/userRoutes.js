@@ -107,8 +107,16 @@ router.post('/logout', (req, res) => {
 router.get('/my-dogs', async (req, res) => {
   if (!req.session.user || req.session.user.role !== 'owner') {
     return res.status(401).json({
-      message: 'Denied - owners only'
+      message: 'Denied, owners only'
     });
+  }
+  try {
+    const [rows] = await db.query(`
+      SELECT dog_id, name, size
+      FROM Dogs
+      WHERE owner_id = ?
+    `, [req.session.user.user_id]);
+    
 
 
 module.exports = router;
