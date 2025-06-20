@@ -85,4 +85,5 @@ app.get('/api/dogs', async (req, res) => {
         const [results] = await promisePool.query(query);
         res.json(results);
     } catch (error) {
-        console.error('Database error:', error)
+        console.error('Database error:', error);
+        res.status(500).json({})
