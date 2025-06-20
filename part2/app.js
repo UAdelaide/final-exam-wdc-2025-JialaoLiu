@@ -51,6 +51,12 @@ app.get('/owner-dashboard.html', function(req, res) {
   }
   res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
 });
+app.get('/walker-dashboard.html', function(req, res) {
+  if (!req.session.user || req.session.user.role !== 'walker') {
+    return res.redirect('/'); // Redirect if not logged in as walker
+  }
+  res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
+});
 
 
 
