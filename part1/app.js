@@ -42,6 +42,5 @@ async function initializeDatabase() {
     try {
         console.log('Question 6 -8');
         await promisePool.execute(
-            
         )
     }
