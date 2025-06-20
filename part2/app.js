@@ -8,7 +8,8 @@ var session = require('express-session');
 
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
-var walkRoutes = 
+var walkRoutes = require('./routes/walkRoutes');
+var userRoutes = require('./routes/userRoutes');
 
 var app = express();
 
