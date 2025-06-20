@@ -127,6 +127,10 @@ app.get('/api/walkers/summary', async (req, res) => {
                 COUNT(CASE when wr.status = 'completed' then 1 end) AS completed_walks
             FROM Users u
             LEFT JOIN WalkRequests wr ON u.user_id = wr.walker_id
-            LEFT JOIN Wal
+            LEFT JOIN WalkRatings r ON wr.request_id = r.request_id
+            WHERE u.role = 'walker'
+            GROUP BY u.user_id, u.username
+            ORDER BY u.username;
+            
                 `
     }
