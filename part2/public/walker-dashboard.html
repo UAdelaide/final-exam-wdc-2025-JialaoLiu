@@ -65,7 +65,12 @@
             if (response.ok) {
               const data = await response.json();
               return data; // Return the user data
-            } else {
+            } throw new Error('Failed to get current user');
+              } catch (error) {
+               console.error('Error getting current user:', error);
+              throw error;
+         }
+        }
 
 
 
