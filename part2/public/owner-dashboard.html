@@ -160,7 +160,7 @@
             const data = await response.json();
             myDogs.value = data.dogs || [];
           }else {
-            throw new Error('Failed to load dogs');
+            error.value('Failed to load dogs');
           }
 
         }
