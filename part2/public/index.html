@@ -66,7 +66,8 @@
             if (!response.ok) {
               const data = await response.json();
               this.dogs = data.dogs || [];
-        }
+
+        }}
 
         async Login(){
           this.errormessage = '';
