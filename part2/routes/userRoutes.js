@@ -91,6 +91,15 @@ router.get('/status', (req, res) => {
   });
 });
 
+// POST logout
+router.post('/logout', (req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      return res.status(500).json({ error: 'Logout failed' });
+    }
+    res.json({ message: 'Logged out successfully' });
+  });
+});
 
 
 module.exports = router;
