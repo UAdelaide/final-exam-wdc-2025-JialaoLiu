@@ -7,6 +7,11 @@ const pool = mySQL.createPool({
     password: '',
     database: 'DogWalkService',
     waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+});
+
+const promisePool = pool.promise();
 
 
 var express = require('express');
