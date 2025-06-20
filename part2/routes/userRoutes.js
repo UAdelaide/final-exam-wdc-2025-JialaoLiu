@@ -82,7 +82,7 @@ router.post('/login', async (req, res) => {
 // Add login status checkpoint
 router.get('/status', (req, res) => {
   res.json({
-    loggedIn: !!req.session.user,
+    isloggedIn: !!req.session.user,
     user: req.session.user || null
   });
 });
