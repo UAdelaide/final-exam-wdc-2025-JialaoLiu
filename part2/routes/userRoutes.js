@@ -116,7 +116,11 @@ router.get('/my-dogs', async (req, res) => {
       FROM Dogs
       WHERE owner_id = ?
     `, [req.session.user.user_id]);
-    
+
+    res.json({
+      success: true,
+      dogs: rows
+    });
 
 
 module.exports = router;
