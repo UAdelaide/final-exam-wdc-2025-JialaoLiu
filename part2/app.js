@@ -46,7 +46,10 @@ app.get('/', function(req, res) {
 
 app.get('/owner-dashboard.html', function(req, res) {
   if (!req.session.user || req.session.user.role !== 'owner') {
-    return res.status(403).send('Access denied');
+    return res.redirect('/'); // Redirect if not logged in as owner
+  }
+  res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
+});
 
 
 
