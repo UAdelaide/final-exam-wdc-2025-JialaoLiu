@@ -104,7 +104,7 @@ router.post('/logout', (req, res) => {
   });
 });
 
-rou
+router.get('/my-dogs')
 
 
 module.exports = router;
