@@ -131,7 +131,7 @@
     }).mount('#app');
 
     methods: {
-      logout() {
+      async logout() {
         fetch('/api/users/logout')
           .then(() => {
             window.location.href = '/login'; // Redirect to login page
