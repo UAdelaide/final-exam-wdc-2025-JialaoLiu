@@ -124,6 +124,6 @@ app.get('/api/walkers/summary', async (req, res) => {
                 u.username,
                 COUNT(DISTINCT d.dog_id) AS total_dogs,
                 AVG(r.rating) AS average_rating,
-                COUNT(CASE)
+                COUNT(CASE when wr.status = 'com'
                 `
     }
