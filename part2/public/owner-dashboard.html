@@ -130,6 +130,22 @@
             message.value = '';
           }
         }
+        async function loadMyDogs() {
+          try {
+            const response = await fetch('/api/users/my-dogs');
+            if (response.ok) {
+            const data = await response.json();
+            myDogs.value = data.dogs || [];
+          }else {
+            error.value('Failed to load dogs');
+          }
+          } catch (err) {
+            error.value = 'Failed to load dogss';
+          }
+
+        }
+
+
               // Logout function
       async function logout() {
         try {
