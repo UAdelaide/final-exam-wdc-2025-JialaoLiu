@@ -131,7 +131,7 @@
     }).mount('#app');
 
     methods: {
-      async logout() {
+      async function logout() {
         try {
           await fetch('/api/users/lougout', {
             method: 'POST'
