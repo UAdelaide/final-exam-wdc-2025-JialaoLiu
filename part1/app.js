@@ -74,4 +74,4 @@ VALUES
     }
 }
 
-app.get('')
+app.get('/api/dogs', async )
