@@ -133,7 +133,7 @@
     methods: {
       logout() {
         fetch('/api/users/logout', {
-          method: 'POST',})
+          method: 'POST'})
           .then(() => {
             window.location.href = '/'; // Redirect to login page
           })
