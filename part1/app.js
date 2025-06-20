@@ -49,7 +49,7 @@ async function initializeDatabase() {
   ('Jarvis', 'Jarvis@example.com', 'hashed123', 'owner'),
   ('testwalker', 'testwalker@example.com', 'hashed999', 'walker');
         `);
-        console.log('Users inserted')
+
         await promisePool.execute(`INSERT INTO Dogs (name, size, owner_id)
 VALUES
   ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123')),
@@ -67,5 +67,8 @@ VALUES
   ((SELECT dog_id FROM Dogs WHERE name = 'Rookie'), '2025-06-21 11:30:00', 30, 'Melbourne St', 'open'),
   ((SELECT dog_id FROM Dogs WHERE name = 'Trey'), '2025-06-21 17:00:00', 90, 'North Adelaide', 'open');
         `);
-
+            console.log('Inserted')
+    }
+    catch (error) {
+        console.error('Error initializing database:', error);
     }
