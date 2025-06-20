@@ -115,18 +115,6 @@
             message.value = '';
           }
         }
-
-        onMounted(() => {
-          loadWalks();
-        });
-
-        return {
-          form,
-          walks,
-          message,
-          error,
-          submitWalkRequest
-        };
               // Logout function
       async function logout() {
         try {
@@ -138,6 +126,19 @@
           console.error('Logout failed:', error);
         }
       }
+        onMounted(() => {
+          loadWalks();
+        });
+
+        return {
+          form,
+          walks,
+          message,
+          error,
+          submitWalkRequest,
+          logout
+        };
+
       }
     }).mount('#app');
 
