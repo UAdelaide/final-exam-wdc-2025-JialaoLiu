@@ -57,7 +57,8 @@
       },
       methods: {
         async mounted() {
-          aw
+          await fetch('/api/dogs')
+
         },
         async Login(){
           this.errormessage = '';
