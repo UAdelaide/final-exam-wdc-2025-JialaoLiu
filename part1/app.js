@@ -1,5 +1,7 @@
+// mySQL connection setup
 const mySQL = require('mysql2');
 
+const pool
 
 
 var express = require('express');
