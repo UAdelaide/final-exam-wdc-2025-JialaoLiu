@@ -13,6 +13,8 @@ const pool = mySQL.createPool({
 
 const promisePool = pool.promise();
 
+module.exports = promisePool;
+
 
 var express = require('express');
 var path = require('path');
