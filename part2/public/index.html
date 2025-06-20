@@ -63,16 +63,8 @@
               })
             });
             const data = await response.json();
-            if (data.success) {
-              this.message = 'Login successful!';
-              // Redirect to the appropriate dashboard based on user type
-              if (data.userType === 'owner') {
-                window.location.href = '/owner-dashboard.html';
-              } else if (data.userType === 'walker') {
-                window.location.href = '/walker-dashboard.html';
-              }
-            } else {
-              this.errormessage = data.message || 'Login failed. Please try again.';
+            if (data.success){
+              win
             }
           }
         }
