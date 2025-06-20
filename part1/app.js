@@ -70,5 +70,6 @@ VALUES
             console.log('Inserted')
     }
     catch (error) {
-        console.error('Error initializing database:', error);
+        console.error('Failed:', error.message);
     }
+    
