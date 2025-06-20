@@ -82,6 +82,8 @@ app.use(function(err, req, res, next) {
 
 // Q17 api/dogs endpotint from part1
 app.get('/api/dogs', async (req, res) => {
-  
+  try {
+    const db = require('./db');
+  }
 
 module.exports = app;
