@@ -131,6 +131,6 @@ app.get('/api/walkers/summary', async (req, res) => {
             WHERE u.role = 'walker'
             GROUP BY u.user_id, u.username
             ORDER BY u.username;
-            
-                `
+        `;
+        const [results] = await promisePool.query(query);
     }
