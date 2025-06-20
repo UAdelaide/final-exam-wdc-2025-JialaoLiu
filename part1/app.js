@@ -74,6 +74,7 @@ module.exports = app;
 //     }
 // }
 
+//question 6 
 app.get('/api/dogs', async (req, res) => {
     try {
         const query = `
