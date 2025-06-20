@@ -71,7 +71,11 @@
                 try{
                   const photoResponse = await fetch('https://dog.ceo/api/breeds/image/random');
                   const photoData = await photoResponse.json();
-                  if 
+                  if (photoData.status === 'success') {
+                    dog.photo = photoData.message; // Assign the random photo URL to the dog object
+                  } else {
+                    dog.photo = 'https://via.placeholder.com/150'; // Fallback image if API fails
+                  }
                 }
               }
 
