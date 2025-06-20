@@ -133,7 +133,11 @@
     methods: {
       logout() {
         try {
-          await fetch('/api/users/lougout')
+          await fetch('/api/users/lougout', {
+            method: 'POST'
+          });
+          window.location.href = '/'; // Redirect to the login page
+          
         }
       }
     }
