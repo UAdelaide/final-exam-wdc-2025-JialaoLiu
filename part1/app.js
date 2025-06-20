@@ -92,3 +92,18 @@ app.get('/api/dogs', async (req, res) => {
 });
 
 //question 7 /api/walkreuqests
+app.get('/api/walkre', async (req, res) => {
+    try {
+        const query = `
+        SELECT d.name as dog_name, d.size, u.username as owner_username
+        FROM Dogs d
+        JOIN Users u ON d.owner_id = u.user_id
+        ORDER BY d.name;
+    `;
+        const [results] = await promisePool.query(query);
+        res.json(results);
+    } catch (error) {
+        console.error('Database error:', error);
+        res.status(500).json({error: 'Fetching dogs failed'});
+    }
+});
