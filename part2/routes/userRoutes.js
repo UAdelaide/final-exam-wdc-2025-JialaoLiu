@@ -62,7 +62,7 @@ router.post('/login', async (req, res) => {
       email: user.email,
       role: user.role
     };
-    //ridirect url
+    //ridirect url based on role
     const redirectUrl = user.role === 'owner' ? '/owner/dashboard' : '/walker/dashboard';
 
 
