@@ -44,6 +44,7 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// basic route protection
 app.get('/owner-dashboard.html', function(req, res) {
   if (!req.session.user || req.session.user.role !== 'owner') {
     return res.redirect('/'); // Redirect if not logged in as owner
