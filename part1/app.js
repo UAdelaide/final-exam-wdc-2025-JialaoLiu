@@ -124,7 +124,7 @@ app.get('/api/walkers/summary', async (req, res) => {
                 u.username as walker_username,
                 COUNT(r.rating) AS total_ratings,
                 AVG(r.rating) AS average_rating,
-                COUNT(CASE WHEN wr.status = 'accepted' AND wr.status = 'completed' THEN 1 END) AS completed_walks,
+                COUNT(CASE WHEN wr.status = 'accepted' AND wr.status = 'completed' THEN 1 END) AS completed_walks
             FROM Users u
             LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id AND wa.status = 'accepted'
             LEFT JOIN WalkRequests wr ON wa.request_id = wr.request_id
