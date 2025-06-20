@@ -59,5 +59,12 @@ VALUES
   ('Trey', 'small', (SELECT user_id FROM Users WHERE username = 'Jarvis'));
             `);
 
-        await promisePool
+        await promisePool.execute(INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+VALUES
+  ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+  ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+  ((SELECT dog_id FROM Dogs WHERE name = 'Cookie'), '2025-06-21 10:00:00', 60, 'Costco', 'open'),
+  ((SELECT dog_id FROM Dogs WHERE name = 'Rookie'), '2025-06-21 11:30:00', 30, 'Melbourne St', 'open'),
+  ((SELECT dog_id FROM Dogs WHERE name = 'Trey'), '2025-06-21 17:00:00', 90, 'North Adelaide', 'open');
+)
     }
