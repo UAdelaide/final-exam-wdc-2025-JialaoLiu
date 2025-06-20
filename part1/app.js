@@ -82,5 +82,7 @@ app.get('/api/dogs', async (req, res) => {
         JOIN Users u ON d.owner_id = u.user_id
         ORDER BY d.name;
     `
-        const [results] = 
-    }
+        const [results] = await promisePool.query(query);
+        res.json(results);
+    } catch (error) {
+        
