@@ -40,7 +40,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
-
+const walkRouter = require('./routes/walkRoutes');
+const userRouter = require('./routes/userRoutes');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
