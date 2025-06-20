@@ -26,7 +26,9 @@ app.use(session(
     cookie: { secure: false } // Default is false.
 ));
 
-
+//middleware
+app.use(express.json());
+app.use(ex)
 
 app.use(logger('dev'));
 app.use(express.json());
