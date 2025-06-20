@@ -76,8 +76,9 @@
                   } else {
                     dog.randomphoto = 'https://images.dog.ceo/breeds/schipperke/n02104365_7956.jpg'; // Fallback image if API fails
                   }
-                }
-              } 
+                }catch (error) {
+              console.error('Error fetching dogs:', error);
+              }
             }
             }
           }
