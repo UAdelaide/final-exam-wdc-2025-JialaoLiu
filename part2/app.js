@@ -10,7 +10,7 @@ var session = require('express-session');
 // var usersRouter = require('./routes/users');
 var walkRoutes = require('./routes/walkRoutes');
 var userRoutes = require('./routes/userRoutes');
-const db = require('./models/db');
+var db = require('./models/db');
 
 var app = express();
 
