@@ -133,4 +133,8 @@ app.get('/api/walkers/summary', async (req, res) => {
             ORDER BY u.username;
         `;
         const [results] = await promisePool.query(query);
+        res.json(results);
+    } catch (error) {
+        console.error('Database error:', error);
+        res.status(500).json({error: 'Fetching walker summary failed'});
     }
