@@ -64,7 +64,8 @@
           try{
             const response = await fetch('/api/dogs');
             if (!response.ok) {
-              const data  
+              const data = await response.json();
+              this.dogs = data.dogs || [];
 
         }
 
