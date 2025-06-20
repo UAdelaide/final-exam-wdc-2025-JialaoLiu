@@ -61,7 +61,15 @@
 
         },
         async fetchDogs() {
-          try
+          try{
+            const response = await fetch('/api/dogs');
+            if (!response.ok) {
+              throw new Error('Failed to fetch dogs');
+            }
+            this.dogs = await response.json();
+          } catch (error) {
+            console.error('Error fetching dogs:', error);
+          }
         }
 
         async Login(){
