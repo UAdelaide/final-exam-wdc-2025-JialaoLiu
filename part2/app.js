@@ -23,7 +23,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false } // Default is false.
-);
+
 
 //middleware
 app.use(express.json());
