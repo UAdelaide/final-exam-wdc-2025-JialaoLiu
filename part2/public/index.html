@@ -60,6 +60,13 @@
           await fetch('/api/dogs')
 
         },
+async loadDogs() {
+  try {
+    const response = await fetch('/api/dogs');
+    if (response.ok) {
+      const data = await response.json();
+      this.dogs = data.dogs || [];
+
         async Login(){
           this.errormessage = '';
 
