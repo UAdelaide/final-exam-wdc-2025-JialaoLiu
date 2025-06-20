@@ -40,7 +40,11 @@ app.use(cookieParser());
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-app.get()
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+
 
 
 
