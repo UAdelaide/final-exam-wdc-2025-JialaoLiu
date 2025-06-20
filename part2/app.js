@@ -88,7 +88,9 @@ app.get('/api/dogs', async (req, res) => {
       SELECT d.name as dog_name,
       d_size, u.username as owner_username
       FROM dogs d
-      `)
+      JOIN users u ON d.owner_id = u.id
+      `);
+      
   }
 
 module.exports = app;
