@@ -85,7 +85,7 @@
             console.error('Error fetching dogs:', error);
           }
         },
-        // Q17: 
+        // Q17: Get the size class based on the dog's size if available
         getSizeClass(size) {
           switch (size) {
             case 'small':
@@ -95,7 +95,7 @@
             case 'large':
               return 'badge bg-danger';
             default:
-              return '';
+              return 'bg-secondary';
           }
         },
 
