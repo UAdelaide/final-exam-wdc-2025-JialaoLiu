@@ -91,8 +91,8 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
-//question 7 /api/walkreuqests
-app.get('/api/walkre', async (req, res) => {
+//question 7 /api/walkrequests
+app.get('/api/walkrequests', async (req, res) => {
     try {
         const query = `
         SELECT d.name as dog_name, d.size, u.username as owner_username
