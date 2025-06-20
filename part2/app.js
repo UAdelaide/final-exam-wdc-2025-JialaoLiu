@@ -92,6 +92,10 @@ app.get('/api/dogs', async (req, res) => {
       `);
       req.json({dogs: rows});
   } catch (error) {
+    console.error('Error fetching dogs:', error);
+    res.status(500).json({ error: 'Failed to fetch dogs' });
   }
+}
+);
 
 module.exports = app;
