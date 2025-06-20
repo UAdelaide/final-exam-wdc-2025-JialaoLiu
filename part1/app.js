@@ -1,7 +1,10 @@
 // mySQL connection setup
 const mySQL = require('mysql2');
 
-const pool
+const pool = mySQL.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
 
 
 var express = require('express');
