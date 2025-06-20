@@ -74,6 +74,7 @@
           }
         }
 
+        
         onMounted(() => {
           loadWalkRequests();
         });
@@ -84,17 +85,7 @@
           error,
           applyToWalk
         };
-      // Logout function
-      async function logout() {
-        try {
-          await fetch('/api/users/logout', {
-            method: 'POST'
-          });
-          window.location.href = '/'; // Redirect to the login page
-        } catch (error) {
-          console.error('Logout failed:', error);
-        }
-      }
+
       }
     }).mount('#app');
 
