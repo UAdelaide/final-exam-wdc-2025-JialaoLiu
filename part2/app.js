@@ -11,6 +11,7 @@ var session = require('express-session');
 var walkRoutes = require('./routes/walkRoutes');
 var userRoutes = require('./routes/userRoutes');
 
+
 var app = express();
 
 // npm audit fix --force
@@ -83,7 +84,6 @@ app.use(function(err, req, res, next) {
 // Q17 api/dogs endpotint from part1
 app.get('/api/dogs', async (req, res) => {
   try {
-    
     const [rows] = await db.query(`
       SELECT d.name as dog_name,
       d_size, u.username as owner_username
