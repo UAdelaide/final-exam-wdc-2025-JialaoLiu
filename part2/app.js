@@ -28,7 +28,7 @@ app.use(session(
 
 //middleware
 app.use(express.json());
-app.use(ex)
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(logger('dev'));
 app.use(express.json());
