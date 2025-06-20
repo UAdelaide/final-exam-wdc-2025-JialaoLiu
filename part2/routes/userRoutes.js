@@ -72,7 +72,15 @@ router.post('/login', async (req, res) => {
       role: user.role,
     }
     , redirectUrl: redirectUrl });
-    res.json
+    res.json({
+      message: 'Login successful',
+      user: {
+        user_id: user.user_id,
+        username: user.username,
+        role: user.role
+      },
+      redirectUrl: redirectUrl
+    });
   } catch (error) {
     console.error('Login error:', error);
     // For console error testing
