@@ -58,7 +58,7 @@
             error.value = err.message;
           }
         }
-        //
+        // modify the applyToWalk function to use the user ID
         async function applyToWalk(requestId) {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
