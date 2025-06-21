@@ -96,7 +96,7 @@
               const data = await response.json();
               this.dogs = data.dogs || [];
 
-
+              // refer to part1 index.html
               for (let dog of this.dogs){
                 try{
                   const photoResponse = await fetch('https://dog.ceo/api/breeds/image/random');
