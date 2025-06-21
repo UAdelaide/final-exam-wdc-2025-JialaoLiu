@@ -59,7 +59,21 @@ app.get('/walker-dashboard.html', function(req, res) {
   res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 });
 
-
+// Q17 api/dogs endpotint from part1
+app.get('/api/dogs', async (req, res) => {
+  try {
+    const [rows] = await db.query(`
+      SELECT d.name as dog_name,
+      d_size, u.username as owner_username
+      FROM dogs d
+      JOIN users u ON d.owner_id = u.id
+      `);
+      res.json({ dogs: rows });
+  } catch (error) {
+    console.error('Error fetching dogs:', error);
+    res.status(500).json({ error: 'Failed to fetch dogs' });
+  }
+};
 
 
 // catch 404 and forward to error handler
