@@ -98,7 +98,7 @@
 
               // refer to part1 index.html
               for (let dog of this.dogs){
-                try{
+                 try{
                   const photoResponse = await fetch('https://dog.ceo/api/breeds/image/random');
                   const photoData = await photoResponse.json();
                   if (photoData.status === 'success') {
