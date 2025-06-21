@@ -92,7 +92,7 @@
         async fetchDogs() {
           try {
             const response = await fetch('/api/dogs');
-            if (!response.ok) {
+            if (response.ok) {
               const data = await response.json();
               this.dogs = data.dogs || [];
 
