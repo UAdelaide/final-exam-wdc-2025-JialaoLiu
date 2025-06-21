@@ -101,7 +101,7 @@
                  try{
                   const photoResponse = await fetch('https://dog.ceo/api/breeds/image/random');
                   const photoData = await photoResponse.json();
-                  dog.randomPhoto = photoData.message;
+                  dog.randomphoto = photoData.message;
                 } catch (error) {
                   dog.randomphoto = 'https://images.dog.ceo/breeds/schipperke/n02104365_7956.jpg'; // Fallback image if API fails
                 }
