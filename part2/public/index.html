@@ -87,10 +87,6 @@
         };
       },
       methods: {
-        async mounted() {
-          await fetch('/api/dogs')
-
-        },
         async fetchDogs() {
           try{
             const response = await fetch('/api/dogs');
