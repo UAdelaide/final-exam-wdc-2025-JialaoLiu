@@ -73,7 +73,7 @@ app.get('/api/dogs', async (req, res) => {
     console.error('Error fetching dogs:', error);
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
-}
+});
 
 
 // catch 404 and forward to error handler
@@ -96,6 +96,6 @@ app.use(function(err, req, res, next) {
 
 
 
-);
+
 
 module.exports = app;
